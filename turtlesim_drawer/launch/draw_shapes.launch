@@ -1,0 +1,14 @@
+<!-- draw_shapes.launch -->
+<launch>
+    <!-- Load parameters -->
+    <rosparam file="$(find turtlesim_drawer)/config/shapes.yaml" command="load"/>
+
+    <!-- Start TurtleSim Node -->
+    <node name="turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen"/>
+
+    <!-- Start Shape Drawer Node -->
+    <node name="shape_drawer" pkg="turtlesim_drawer" type="draw_shapes.py" output="screen"/>
+
+     <!-- Start Teleoperation Node (Optional) -->
+     <!-- <node name="teleop_keyboard" pkg="turtlesim_drawer" type="teleop_keyboard.py" output="screen"/> -->
+</launch>

@@ -1,0 +1,56 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+effort_controllers:
+  LF_HAA_controller:
+    type: effort_controllers/JointEffortController
+    joint: LF_HAA
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  LF_HFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: LF_HFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  LF_KFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: LF_KFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  RF_HAA_controller:
+    type: effort_controllers/JointEffortController
+    joint: RF_HAA
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  RF_HFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: RF_HFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  RF_KFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: RF_KFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  LH_HAA_controller:
+    type: effort_controllers/JointEffortController
+    joint: LH_HAA
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  LH_HFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: LH_HFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  LH_KFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: LH_KFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  RH_HAA_controller:
+    type: effort_controllers/JointEffortController
+    joint: RH_HAA
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  RH_HFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: RH_HFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}
+  RH_KFE_controller:
+    type: effort_controllers/JointEffortController
+    joint: RH_KFE
+    pid: {p: 9, i: 0.03, d: 0.3055, i_clamp_min:  -1000, i_clamp_max: 1000}

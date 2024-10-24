@@ -1,0 +1,14 @@
+<launch>
+    <!-- Load joint state publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="false" output="screen" />
+  
+    <!-- Load effort controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+          args="joint_state_controller 
+                LF_HAA_controller LF_HFE_controller LF_KFE_controller
+                RF_HAA_controller RF_HFE_controller RF_KFE_controller
+                LH_HAA_controller LH_HFE_controller LH_KFE_controller
+                RH_HAA_controller RH_HFE_controller RH_KFE_controller">
+    </node>
+  </launch>
+  

@@ -1,0 +1,9 @@
+<launch>
+  <node name="joy_node" pkg="joy" type="joy_node" respawn="false" output="screen">
+  </node>
+
+  <node name="teleop_anymal" pkg="anymal_joystick" type="teleop_anymal_node" output="screen">
+    <param name="scale_angular" value="2.0"/>
+    <param name="scale_linear" value="2.0"/>
+  </node>
+</launch>

@@ -1,0 +1,9 @@
+
+<!-- simulation.launch -->
+<launch>
+    <!-- Launch the simulation publisher node -->
+    <node name="quadruped_simulation_publisher" pkg="quadruped_analysis" type="quadruped_simulation.py" output="screen"/>
+    
+    <!-- Launch the subscriber node -->
+    <node name="gait_analyzer" pkg="quadruped_analysis" type="gait_analysis_subscriber.py" output="screen"/>
+</launch>

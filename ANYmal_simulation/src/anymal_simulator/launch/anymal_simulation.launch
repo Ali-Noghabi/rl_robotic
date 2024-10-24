@@ -1,0 +1,14 @@
+<launch>
+  <!-- Load the URDF -->
+  <param name="robot_description" textfile="$(find anymal_b_simple_description)/urdf/anymal.urdf"/>
+
+  <!-- Launch Gazebo with the robot -->
+  <include file="$(find anymal_simulator)/launch/gazebo.launch"/>
+
+  <!-- Load controllers -->
+  <include file="$(find anymal_controller)/launch/anymal_controller.launch"/>
+
+  <!-- Launch Joystick control -->
+  <!-- <include file="$(find anymal_joystick)/launch/joystick_control.launch"/> -->
+
+</launch>
